@@ -9,7 +9,7 @@ import { getRoles, hasPermission } from '../../../authorization';
 import { settings } from '../../../settings';
 import { passwordPolicy } from '../lib/passwordPolicy';
 import { validateEmailDomain } from '../lib';
-import { validateUserRoles } from '../../../../ee/app/authorization/server/validateUserRoles';
+// import { validateUserRoles } from '../../../../ee/app/authorization/server/validateUserRoles';
 import { saveUserIdentity } from './saveUserIdentity';
 
 import { checkEmailAvailability, checkUsernameAvailability, setUserAvatar, setEmail, setStatusText } from '.';
@@ -50,6 +50,16 @@ function _sendUserEmail(subject, html, userData) {
 			message: error.message,
 		});
 	}
+}
+
+function validateUserRoles(userId, userData) {
+	if (!isEnterprise()) {
+		return;
+	}
+
+	throw new Meteor.Error('validate-user-role', "hit other user roles", {
+		method: 'validateUserRoles',
+	});
 }
 
 function validateUserData(userId, userData) {
@@ -98,6 +108,7 @@ function validateUserData(userId, userData) {
 	}
 
 	if (userData.roles) {
+		console.log(userData);
 		validateUserRoles(userId, userData);
 	}
 

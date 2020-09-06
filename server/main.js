@@ -3,7 +3,7 @@ import '../imports/startup/server';
 
 import '../lib/RegExp';
 
-import '../ee/server';
+// import '../ee/server';
 import './lib/pushConfig';
 import './lib/roomFiles';
 import './startup/migrations';
