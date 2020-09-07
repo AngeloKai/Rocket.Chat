@@ -1,7 +1,7 @@
 {
-  "name": "Rocket.Chat",
-  "description": "Have your own open-source Slack-like online chat platform.",
-  "repository": "https://github.com/RocketChat/Rocket.Chat",
+  "name": "Sparks",
+  "description": "Community-as-a-Service Platform",
+  "repository": "https://github.com/AngeloKai/Sparks-Com",
   "logo": "https://raw.githubusercontent.com/RocketChat/Rocket.Chat/master/public/images/logo/1024x1024.png",
   "keywords": ["meteor", "social", "community", "chat"],
   "website": "https://rocket.chat",
