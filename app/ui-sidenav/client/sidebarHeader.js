@@ -99,18 +99,18 @@ const toolbarButtons = (/* user */) => [{
 			});
 		};
 
-		const createChannel = action('Create_A_New_Channel', 'createChannel');
+		// const createChannel = action('Create_A_New_Channel', 'createChannel');
 		const createDirectMessage = action('Direct_Messages', 'CreateDirectMessage');
 		const createDiscussion = action('Discussion_title', 'CreateDiscussion');
 
 
 		const items = [
-			hasAtLeastOnePermission(['create-c', 'create-p'])
-			&& {
-				icon: 'hashtag',
-				name: t('Channel'),
-				action: createChannel,
-			},
+			hasAtLeastOnePermission(['create-c', 'create-p']) &&
+			// && {
+			// 	icon: 'hashtag',
+			// 	name: t('Channel'),
+			// 	action: createChannel,
+			// },
 			hasPermission('create-d')
 			&& {
 				icon: 'team',
